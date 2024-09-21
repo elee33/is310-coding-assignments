@@ -1,0 +1,5 @@
+You are almost at the end of the maze!
+
+Look for a file that contains a specific word. Use `grep` to find it.
+
+The word is hidden in plain sight. Use your command-line skills to uncover it.
