@@ -1,18 +1,18 @@
 import requests
 
 # API keys
-europeana_api_key = "scallawlani"  # your Europeana API key here
-sports_api_key = "YOUR_SPORTS_API_KEY"  # replace with your sports API key
+europeana_api_key = "scallawlani"  
+sports_api_key = "3"  
 
-# Europeana API setup
+
 def search_europeana(query):
-    europeana_url = f"https://api.europeana.eu/record/v2/search.json"
+    europeana_url = "https://api.europeana.eu/record/v2/search.json"
     params = {
         'wskey': europeana_api_key,
         'query': query,
         'media': 'true',
         'profile': 'rich',
-        'rows': 5  # limit results
+        'rows': 5  
     }
     response = requests.get(europeana_url, params=params)
     if response.status_code == 200:
@@ -42,5 +42,19 @@ def main():
 
     print("Europeana Results:")
     for item in europeana_results:
+        title = item.get('title', ['No title'])[0]
+        data_provider = item.get('dataProvider', 'Unknown provider')
+        print(f"Title: {title}, Provider: {data_provider}")
+
+    print("\nSports API Results:")
+    for player in sports_results:
+        player_name = player.get('strPlayer', 'No name')
+        player_team = player.get('strTeam', 'No team')
+        player_sport = player.get('strSport', 'No sport')
+        print(f"Name: {player_name}, Team: {player_team}, Sport: {player_sport}")
+
+if __name__ == "__main__":
+    main()
+
       
 
