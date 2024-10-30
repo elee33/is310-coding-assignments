@@ -1,73 +1,34 @@
+# Europeana and Sports Data API Project
 
-<<<<<<< HEAD
-## Europeana and Sports Data API Project
-
-This project combines data from the Europeana API and a Sports Data API to retrieve and analyze historical sports information. The `getting_culture.py` script fetches details about notable sports events, such as the Olympics, and cultural heritage items related to sports. 
-=======
-Project Overview
-
-This project uses The One API to get data on characters from J.R.R. Tolkien's world. It then cross-references this information with Europeana to find related historical and cultural items. The goal is to bring together pop culture data with European heritage artifacts.
-
-Script Summary
-
-The script getting_culture.py does the following:
-
-Fetches character data from The One API (like name, race, and realm).
-Searches Europeana for items that might be connected to these characters.
-Displays the combined information.
-Setup
-
-echo "# API Getting Data Assignment
+This project uses data from the **Europeana API** and **TheSportsDB API** to retrieve and analyze sports-related historical and cultural information. The `getting_culture.py` script fetches details about specific teams (e.g., "Arsenal") and cross-references these details with historical items from Europeana’s collections.
 
 ## Project Overview
 
-This project uses **The One API** to get data on characters from J.R.R. Tolkien's world. It then cross-references this information with **Europeana** to find related historical and cultural items. The goal is to bring together pop culture data with European heritage artifacts.
+The objective is to combine sports data and historical cultural artifacts to illustrate the intersection between sports history and European cultural heritage.
+
+## Features
+
+- **Europeana Search**: Retrieves historical and cultural items from Europeana related to the query (e.g., team names).
+- **Sports Data Retrieval**: Uses TheSportsDB API to get team information, including stadium details and description.
+- **Structured Output**: Combines and displays information from both sources in a readable format.
 
 ## Script Summary
 
-The script \`getting_culture.py\` does the following:
-- Fetches character data from **The One API** (like name, race, and realm).
-- Searches **Europeana** for items that might be connected to these characters.
-- Displays the combined information.
+The script `getting_culture.py` performs the following:
 
-## Setup
+1. **Fetches team data from TheSportsDB API**: Retrieves information on specific teams, including stadium names and a description.
+2. **Searches Europeana**: Finds items from Europeana’s database that are culturally related to the sports query.
+3. **Displays Results**: Outputs the combined data, showing both sports and historical results.
 
-1. **Requirements**:
-   - Install Python and the \`requests\` package.
-   \`\`\`bash
-   pip install requests
-   \`\`\`
+## Example Output
 
-2. **Get API Keys**:
-   - Register at [The One API](https://the-one-api.dev) and [Europeana API](https://pro.europeana.eu/pages/get-api).
-   - Store these keys securely.
+```plaintext
+Sports API Results:
+Team: Arsenal, Stadium: Emirates Stadium
 
-3. **Running the Script**:
-   - Run the script by entering:
-   \`\`\`bash
-   python getting_culture.py
-   \`\`\`
-" > README.md
->>>>>>> 2208d07 (Final project update with README and getting_culture script)
+Europeana Results:
+Title: Arsenal, Provider: Slovak National Gallery
+Title: Arsenal, Provider: National Library of France
+Title: Arsenal, Provider: Deutsche Fotothek
+Title: Arsenal, Provider: German Documentation Center for Art History - Marburg Picture Index
 
-### Project Features
-- Queries Europeana’s collection for historical cultural items related to sports.
-- Uses a Sports Data API to retrieve information on notable athletes or events.
-- Outputs a structured result, combining data from both sources.
-
-### Setup Instructions
-
-1. **Install Required Packages:**
-   ```bash
-   pip install requests
-   ```
-
-2. **Set Up API Keys:**
-   - Get an API key for Europeana from [Europeana's API page](https://pro.europeana.eu/pages/get-api) and insert it into the `getting_culture.py` file where prompted.
-   - Insert your Sports Data API key, if needed.
-
-### Running the Script
-
-Run the script with:
-```bash
-python getting_culture.py
