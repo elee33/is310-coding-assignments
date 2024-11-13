@@ -1,0 +1,2 @@
+Count the words in a file to find the next clue.
+But beware, not all files are what they seem.

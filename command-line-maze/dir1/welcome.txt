@@ -1,0 +1,6 @@
+Welcome to the Command Line Corn Maze!
+
+To begin, look for a directory that seems out of place.
+Use your navigation skills to find the first clue.
+
+
